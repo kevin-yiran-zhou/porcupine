@@ -38,7 +38,7 @@ import ai.picovoice.porcupine.PorcupineManagerCallback;
 
 public class PorcupineService extends Service {
     private static final String CHANNEL_ID = "PorcupineServiceChannel";
-    private static final String ACCESS_KEY = "${YOUR_ACCESS_KEY_HERE}";
+    private static final String ACCESS_KEY = "XXX";
 
     private PorcupineManager porcupineManager;
     private int numUtterances;
@@ -76,7 +76,8 @@ public class PorcupineService extends Service {
         try {
             porcupineManager = new PorcupineManager.Builder()
                     .setAccessKey(ACCESS_KEY)
-                    .setKeyword(Porcupine.BuiltInKeyword.PORCUPINE)
+//                    .setKeyword(Porcupine.BuiltInKeyword.PORCUPINE)
+                    .setKeywordPath("Hey-Ava_en_android_v3_0_0.ppn")
                     .setSensitivity(0.7f).build(
                             getApplicationContext(),
                             porcupineManagerCallback);

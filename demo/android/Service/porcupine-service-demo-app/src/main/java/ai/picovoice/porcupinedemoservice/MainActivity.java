@@ -33,7 +33,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ServiceBroadcastReceiver receiver;
+//    private ServiceBroadcastReceiver receiver;
 
     private boolean hasRecordPermission() {
         return ActivityCompat.checkSelfPermission(
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        receiver = new ServiceBroadcastReceiver();
+//        receiver = new ServiceBroadcastReceiver();
 
         ToggleButton recordButton = findViewById(R.id.startButton);
 
@@ -111,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter("PorcupineInitError"));
+//        registerReceiver(receiver, new IntentFilter("PorcupineInitError"));
     }
 
     @Override
     protected void onDestroy() {
-        unregisterReceiver(receiver);
+//        unregisterReceiver(receiver);
         super.onDestroy();
     }
 
@@ -136,10 +136,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public class ServiceBroadcastReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            onPorcupineInitError(intent.getStringExtra("errorMessage"));
-        }
-    }
+//    public class ServiceBroadcastReceiver extends BroadcastReceiver {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            onPorcupineInitError(intent.getStringExtra("errorMessage"));
+//        }
+//    }
 }
