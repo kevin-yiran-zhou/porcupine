@@ -38,7 +38,7 @@ import ai.picovoice.porcupine.PorcupineManagerCallback;
 
 public class PorcupineService extends Service {
     private static final String CHANNEL_ID = "PorcupineServiceChannel";
-    private static final String ACCESS_KEY = "XXX";
+    private static final String ACCESS_KEY = "zmFm6xZsxwRSYlOzB8S1Z+d77HtgYLBOLMd23CvGDyG6vzCzgKPv7Q==";
 
     private PorcupineManager porcupineManager;
     private int numUtterances;
